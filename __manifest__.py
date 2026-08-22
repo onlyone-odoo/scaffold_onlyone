@@ -1,4 +1,3 @@
-# pylint: disable=missing-module-docstring,pointless-statement
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     ###########################
@@ -6,46 +5,41 @@
     ###########################
     "name": "Module Name",
     "summary": """
-        Summary of the module"s purpose""",
+        Summary of the module's purpose""",
     "author": "Be OnlyOne",
     "maintainers": ["onlyone-odoo"],
     "website": "https://onlyone.odoo.com/",
     "license": "AGPL-3",
     "category": "Technical Settings",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    # any module necessary for this one to work correctly
     "depends": ["base"],
-    ###########################
-    # Delete all the commented lines after editing the module
-    ###########################
-    ### XML Data files
+    # "external_dependencies": {
+    #     "python": ["example"],
+    #     "bin": ["example"],
+    # },
+    # data order: sequences → data → views → security → wizards → reports → menus
     # "data": [
     #     "security/ir.model.access.csv",
-    #     "views/views.xml",
-    #     "views/templates.xml",
+    #     "views/model_name_views.xml",
     # ],
-    ### XML Demo files
-    # only loaded in demo mode
     # "demo": [
     #     "demo/demo.xml",
     # ],
-    ### Assets
-    # In 15.0 ++, Odoo adds a new way to add js/css assets files to a module.
+    # Odoo 18 assets (no web.assets_qweb)
     # "assets": {
     #     "web.assets_backend": [
-    #         "/my_module/path/to/file"
+    #         "module_name/static/src/**/*",
     #     ],
-    #     "web.assets_qweb": [
-    #         "/my_module/path/to/file", # QWeb templates. Example: 'pos_sale/static/src/xml/**/*',
+    #     "point_of_sale._assets_pos": [
+    #         "module_name/static/src/**/*",
     #     ],
-    # }
+    #     "web.report_assets_common": [
+    #         "module_name/static/src/scss/report.scss",
+    #     ],
+    # },
     ###########################
     # Delete all the commented lines after editing the module
     ###########################
